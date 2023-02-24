@@ -25,11 +25,15 @@ function App() {
       title: "Card 5",
     },
   ];
-  const [numCards, setNumCards] = useState(0);
+  const [numCards, setNumCards] = useState<number>(1);
+  console.log("numCards: ", numCards);
+  console.log("Array(numCards)", Array(numCards));
   const [selectedCardIndex, setSelectedCardIndex] = useState(-1);
 
   const CARD_ANGLE = 30; // in degrees
   const angle = CARD_ANGLE / (numCards - 1);
+  // based off numCards, make an array containng the indexes
+  const cardArray = Array.from({ length: numCards }, (_, index) => index);
 
   return (
     <div className="App">
@@ -42,11 +46,10 @@ function App() {
         add more
       </button>
       <div className="card-hand">
-        {cards.map((card, index) => (
-          // <div className="card-container" key={index}>
-          <div className="card" key={index}>
-            <h2>{card.title}</h2>
-            <button onClick={() => setSelectedCardIndex(index)}>Select</button>
+        {cardArray.map((card: number) => (
+          <div className="card" key={card}>
+            <h2>Card {card + 1}</h2>
+            <button onClick={() => setSelectedCardIndex(card)}>Select</button>
           </div>
         ))}
       </div>
