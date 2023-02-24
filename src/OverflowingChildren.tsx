@@ -34,6 +34,10 @@ function App() {
     }
   }, [highlightedIndex]);
 
+  const nextHighlighted = () => {
+    setHighlightedIndex((prevState) => (prevState + 1) % numChildren);
+  };
+
   const array = Array.from({ length: numChildren }, (_, index) => index);
 
   return (
@@ -46,6 +50,7 @@ function App() {
       >
         add more
       </button>
+      <button onClick={nextHighlighted}>Increment</button>
       <div className="parent">
         {array.map((card: number, index) => (
           <div
@@ -56,7 +61,9 @@ function App() {
               border: highlightedIndex === index ? "2px solid red" : "none",
             }}
             onClick={() => handleChildClick(index)}
-          />
+          >
+            Child {card}
+          </div>
         ))}
       </div>
     </div>
