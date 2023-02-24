@@ -1,34 +1,57 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const cards = [
+    {
+      id: 1,
+      title: "Card 1",
+    },
+    {
+      id: 2,
+      title: "Card 2",
+    },
+    {
+      id: 3,
+      title: "Card 3",
+    },
+    {
+      id: 4,
+      title: "Card 4",
+    },
+    {
+      id: 5,
+      title: "Card 5",
+    },
+  ];
+  const [numCards, setNumCards] = useState(0);
+  const [selectedCardIndex, setSelectedCardIndex] = useState(-1);
+
+  const CARD_ANGLE = 30; // in degrees
+  const angle = CARD_ANGLE / (numCards - 1);
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <h1>Pericle Playground</h1>
+      <button
+        onClick={() => {
+          setNumCards(numCards + 1);
+        }}
+      >
+        add more
+      </button>
+      <div className="card-hand">
+        {cards.map((card, index) => (
+          // <div className="card-container" key={index}>
+          <div className="card" key={index}>
+            <h2>{card.title}</h2>
+            <button onClick={() => setSelectedCardIndex(index)}>Select</button>
+          </div>
+        ))}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

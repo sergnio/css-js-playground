@@ -5,6 +5,42 @@
   text-align: center;
 }
 
+.card-hand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.card-container {
+  position: relative;
+  width: 10em;
+  height: 20em;
+}
+
+.card {
+  width: 5em;
+}
+
+.card:nth-child(1) {
+  transform: rotate(-10deg) translateY(15%);
+}
+.card:nth-child(2) {
+  transform: rotate(-5deg) translateY(5%);
+}
+
+.card:nth-child(3) {
+  transform: rotate(0);
+}
+
+.card:nth-child(4) {
+  transform: rotate(5deg) translateY(5%);
+}
+
+.card:nth-child(5) {
+  transform: rotate(10deg) translateY(15%);
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -31,10 +67,6 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
-  padding: 2em;
 }
 
 .read-the-docs {
