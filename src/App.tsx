@@ -26,8 +26,6 @@ function App() {
     },
   ];
   const [numCards, setNumCards] = useState<number>(1);
-  console.log("numCards: ", numCards);
-  console.log("Array(numCards)", Array(numCards));
   const [selectedCardIndex, setSelectedCardIndex] = useState(-1);
 
   const CARD_ANGLE = 30; // in degrees
