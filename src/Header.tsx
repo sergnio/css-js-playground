@@ -4,12 +4,11 @@ import { routes } from "./main";
 export default () => {
   return (
     <ul>
-      <NavLink to={routes.home}>
-        <li>Home</li>
-      </NavLink>
-      <NavLink to={routes.overflow}>
-        <li>Overflower</li>
-      </NavLink>
+      {routes.map((route) => (
+        <NavLink to={route.path}>
+          <li>{route.name}</li>
+        </NavLink>
+      ))}
     </ul>
   );
 };
