@@ -6,6 +6,7 @@ import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import OverflowingChildren from "./OverflowingChildren";
 import AnimeSunglasses from "./AnimeSunglasses";
+import TripleDots from "./TripleDots";
 
 interface RoutesProps {
   name: string;
@@ -21,6 +22,7 @@ export const routes: RoutesProps[] = [
     component: OverflowingChildren,
   },
   { name: "Anime Sunglasses", path: "/sunglasses", component: AnimeSunglasses },
+  { name: "Triple dots", path: "/dots", component: TripleDots },
 ];
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
