@@ -9,7 +9,8 @@ import AnimeSunglasses from "./AnimeSunglasses";
 import TripleDots from "./TripleDots";
 import MusicToggler from "./MusicToggler";
 import ParchmentJagged from "./ParchmentJagged";
-import SeenImagesProvider from "src/SeenImagesProvider";
+import SeenImagesProvider from "./SeenImagesProvider";
+import ConfirmToDelete from "./ConfirmToDelete";
 
 interface RoutesProps {
   name: string;
@@ -27,6 +28,7 @@ export const routes: RoutesProps[] = [
   { name: "Anime Sunglasses", path: "/sunglasses", component: AnimeSunglasses },
   { name: "Triple dots", path: "/dots", component: TripleDots },
   { name: "Music Toggler", path: "/music", component: MusicToggler },
+  { name: "Confirm delete", path: "/confirm", component: ConfirmToDelete },
   {
     name: "Parchment jaggedy edge",
     path: "/jagged",
