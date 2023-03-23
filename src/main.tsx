@@ -8,6 +8,8 @@ import OverflowingChildren from "./OverflowingChildren";
 import AnimeSunglasses from "./AnimeSunglasses";
 import TripleDots from "./TripleDots";
 import MusicToggler from "./MusicToggler";
+import ParchmentJagged from "./ParchmentJagged";
+import SeenImagesProvider from "src/SeenImagesProvider";
 
 interface RoutesProps {
   name: string;
@@ -25,6 +27,11 @@ export const routes: RoutesProps[] = [
   { name: "Anime Sunglasses", path: "/sunglasses", component: AnimeSunglasses },
   { name: "Triple dots", path: "/dots", component: TripleDots },
   { name: "Music Toggler", path: "/music", component: MusicToggler },
+  {
+    name: "Parchment jaggedy edge",
+    path: "/jagged",
+    component: ParchmentJagged,
+  },
 ];
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
