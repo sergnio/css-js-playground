@@ -1,7 +1,7 @@
 // YouTubePlayer.tsx
-import React, { useEffect, useRef } from 'react';
-import styled from 'styled-components';
-import YT from 'youtube'
+import React, { useEffect, useRef } from "react";
+import styled from "styled-components";
+import YT from "youtube";
 
 declare global {
   interface Window {
@@ -14,7 +14,7 @@ const PlayerWrapper = styled.div`
   //width: 100%;
   //height: 100%;
   width: 500px;
-  height: 500px;  
+  height: 500px;
 `;
 
 // interface YouTubePlayerProps {
@@ -23,16 +23,16 @@ const PlayerWrapper = styled.div`
 
 // const YouTubePlayer: React.FC<YouTubePlayerProps> = ({ videoId }) => {
 export default () => {
-  const videoId = 'SvkMwizUQCs';
+  const videoId = "SvkMwizUQCs";
 
   const playerRef = useRef<HTMLDivElement | null>(null);
   const playerInstance = useRef<YT.Player | null>(null);
 
   useEffect(() => {
     if (!window.YT) {
-      const tag = document.createElement('script');
-      tag.src = 'https://www.youtube.com/iframe_api';
-      const firstScriptTag = document.getElementsByTagName('script')[0];
+      const tag = document.createElement("script");
+      tag.src = "https://www.youtube.com/iframe_api";
+      const firstScriptTag = document.getElementsByTagName("script")[0];
       if (firstScriptTag.parentNode) {
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
       }
@@ -53,6 +53,5 @@ export default () => {
     };
   }, [videoId]);
 
-  return <PlayerWrapper ref={playerRef}></PlayerWrapper>
+  return <PlayerWrapper ref={playerRef}></PlayerWrapper>;
 };
-

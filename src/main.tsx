@@ -12,6 +12,7 @@ import ParchmentJagged from "./ParchmentJagged";
 import ConfirmToDelete from "./ConfirmToDelete";
 import YoutubePlayer from "./YoutubePlayer";
 import Parent from "./Parent";
+import Countdown from "./Countdown";
 
 interface RoutesProps {
   name: string;
@@ -30,7 +31,7 @@ export const routes: RoutesProps[] = [
   { name: "Triple dots", path: "/dots", component: TripleDots },
   { name: "Music Toggler", path: "/music", component: MusicToggler },
   { name: "Confirm delete", path: "/confirm", component: ConfirmToDelete },
-  { name: "YT player", path: "/yt", component: YoutubePlayer },
+  { name: "Countdown", path: "/countdown", component: Countdown },
   { name: "Parent div", path: "/parent", component: Parent },
   {
     name: "Parchment jaggedy edge",
