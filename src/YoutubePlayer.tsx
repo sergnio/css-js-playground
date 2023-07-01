@@ -1,7 +1,6 @@
 // YouTubePlayer.tsx
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
-import YT from "youtube";
 
 declare global {
   interface Window {
