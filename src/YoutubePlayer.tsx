@@ -31,6 +31,7 @@ export default () => {
     if (!window.YT) {
       const tag = document.createElement("script");
       tag.src = "https://www.youtube.com/iframe_api";
+      // tag.src = `https://youtube.googleapis.com/embed/?partnerid=30&docid=${videoId}`;
       const firstScriptTag = document.getElementsByTagName("script")[0];
       if (firstScriptTag.parentNode) {
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
