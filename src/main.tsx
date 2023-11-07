@@ -13,6 +13,8 @@ import Parent from "./Parent";
 import Countdown from "./Countdown";
 import YoutubePlayer from "./YoutubePlayer";
 import PAK from "./PAK";
+import HtmlVideo from "./HtmlVideo";
+import MapMaker from "./MapMaker";
 
 interface RoutesProps {
   name: string;
@@ -33,8 +35,10 @@ export const routes: RoutesProps[] = [
   { name: "Countdown", path: "/countdown", component: Countdown },
   // { name: "Yt Iframe", path: "/ytIframe", component: YTIframe },
   { name: "YT Player", path: "/ytIframe", component: YoutubePlayer },
+  { name: "Map " + "Maker", path: "/map", component: MapMaker },
   { name: "pak", path: "/pak", component: PAK },
   { name: "Parent div", path: "/parent", component: Parent },
+  { name: "Pleb Video", path: "/video", component: HtmlVideo },
   {
     name: "Parchment jaggedy edge",
     path: "/jagged",
